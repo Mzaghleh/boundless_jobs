@@ -114,6 +114,7 @@ RSpec.describe JobsController, type: :controller do
       job = Job.create! valid_attributes
       delete :destroy, params: { id: job.to_param }, session: valid_session
       expect(response).to redirect_to(jobs_url)
+      
     end
   end
 end
